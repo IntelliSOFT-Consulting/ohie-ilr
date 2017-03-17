@@ -3,7 +3,7 @@ FROM uwitech/ohie-base
 USER root
 
 RUN apt-get update
-RUN apt-get -y install software-properties-common python-software-properties
+RUN apt-get -y install software-properties-common python-software-properties debconf-utils
 COPY openinfoman /etc/init.d/openinfoman
 RUN chmod 777 /etc/init.d/openinfoman
 RUN add-apt-repository ppa:openhie/release
