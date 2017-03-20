@@ -4,9 +4,8 @@ USER root
 
 #install openinfoman
 
-RUN apt-get update
 COPY BaseX862.zip /root/BaseX862.zip
-RUN apt-get -y install software-properties-common python-software-properties debconf-utils wget unzip git default-jre openjdk-7-jre
+RUN apt-get -y install software-properties-common python-software-properties debconf-utils unzip git default-jre openjdk-7-jre
 RUN unzip ~/BaseX862.zip -d ~/
 RUN touch ~/basex/.basexhome
 RUN chmod 777 -R ~/basex
