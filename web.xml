@@ -44,7 +44,7 @@
   </context-param>
   <context-param>
     <param-name>org.basex.log</param-name>
-    <param-value>false</param-value>
+    <param-value>true</param-value>
   </context-param>
   -->
 

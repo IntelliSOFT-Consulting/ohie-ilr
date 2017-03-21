@@ -12,7 +12,7 @@ RUN chmod 777 -R ~/basex
 RUN git clone https://github.com/openhie/openinfoman ~/openinfoman
 
 COPY basex.sh /root/basex.sh
-RUN chmod 777 -R ~/basex.sh
+RUN chmod 777 ~/basex.sh
 RUN ~/./basex.sh
 
 COPY web.xml /root/basex/webapp/WEB-INF/web.xml 
@@ -20,7 +20,12 @@ COPY web.xml /root/basex/webapp/WEB-INF/web.xml
 #install openinfoman-ilr
 
 COPY openinfoman-ilr.sh /root/openinfoman-ilr.sh
-RUN chmod 777 -R ~/openinfoman-ilr.sh
+RUN chmod 777 ~/openinfoman-ilr.sh
 RUN ~/./openinfoman-ilr.sh
 
-CMD /root/basex/bin/./basexhttp
+#start service with logs
+
+COPY start.sh /root/start.sh
+RUN chmod 777 ~/start.sh
+
+CMD ~/./start.sh
