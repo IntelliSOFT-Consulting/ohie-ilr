@@ -17,4 +17,10 @@ RUN ~/./basex.sh
 
 COPY web.xml /root/basex/webapp/WEB-INF/web.xml 
 
+#install openinfoman-ilr
+
+COPY openinfoman-ilr.sh /root/openinfoman-ilr.sh
+RUN chmod 777 -R ~/openinfoman-ilr.sh
+RUN ~/./openinfoman-ilr.sh
+
 CMD /root/basex/bin/./basexhttp
