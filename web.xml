@@ -33,7 +33,7 @@
     <param-name>org.basex.authmethod</param-name>
     <param-value>Digest</param-value>
   </context-param>
-
+  -->
   <context-param>
     <param-name>org.basex.httplocal</param-name>
     <param-value>true</param-value>
@@ -46,7 +46,6 @@
     <param-name>org.basex.log</param-name>
     <param-value>true</param-value>
   </context-param>
-  -->
 
   <!-- Global session and servlet listener -->
   <listener>
