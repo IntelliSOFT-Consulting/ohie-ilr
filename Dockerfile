@@ -31,6 +31,10 @@ COPY openinfoman-ilr.sh /root/openinfoman-ilr.sh
 RUN chmod 777 ~/openinfoman-ilr.sh
 RUN ~/./openinfoman-ilr.sh
 
+#install openinfoman-hwr
+
+RUN apt-get -y install openinfoman-hwr
+
 #start service with logs
 
 COPY start.sh /root/start.sh
