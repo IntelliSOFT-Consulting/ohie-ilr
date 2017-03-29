@@ -5,7 +5,7 @@
 #watch for log changes
 
 inotifywait -m /root/basex/data/.logs/ -e create -e moved_to -e modify |
-    while true
+    while read
     do
-        tail -F /root/basex/data/.logs/*.log
+        tail -f $(ls -1t /root/basex/data/.logs/* | sed q)
     done
