@@ -7,5 +7,5 @@ sudo apt-get update
 
 echo "openinfoman openinfoman/dbname string provider_directory" | debconf-set-selections
 echo "openinfoman openinfoman/memsize string 1g" | debconf-set-selections
-echo "openinfoman openinfoman/baseurl string" | debconf-set-selections
+echo "openinfoman openinfoman/baseurl string https://localhost:5000" | debconf-set-selections
 sudo apt-get -y install openinfoman-ilr
