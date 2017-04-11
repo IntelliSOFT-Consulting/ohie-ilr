@@ -24,6 +24,7 @@ RUN chmod 777 ~/basex.sh
 RUN ~/./basex.sh
 
 COPY web.xml /root/basex/webapp/WEB-INF/web.xml 
+COPY csd_lsd.xqm /var/lib/openinfoman/repo/com/github/openhie/openinfoman/csd_lsd.xqm
 
 #install openinfoman-ilr
 
@@ -37,7 +38,4 @@ RUN apt-get -y install openinfoman-hwr
 
 #start service with logs
 
-COPY start.sh /root/start.sh
-RUN chmod 777 ~/start.sh
-
-CMD ~/./start.sh
+CMD /var/lib/openinfoman/bin/./basexhttp
