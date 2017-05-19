@@ -46,3 +46,12 @@ ln -sf /root/openinfoman/webapp/*xqm .
 mkdir -p /root/basex/webapp/static
 cd /root/basex/webapp/static
 ln -sf /root/openinfoman/webapp/static/* .
+
+#Installation of HWR adapter
+cd ~/
+git clone https://github.com/openhie/openinfoman-hwr
+cd ~/basex/resources/stored_query_definitions
+ln -sf ~/openinfoman-hwr/resources/stored_query_definitions/* .
+cd ~/basex/resources/stored_updating_query_definitions
+ln -sf ~/openinfoman-hwr/resources/stored_updating_query_definitions/* .
+
