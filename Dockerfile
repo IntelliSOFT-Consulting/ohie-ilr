@@ -48,6 +48,8 @@ RUN ~/openinfoman-ilr.sh
 RUN apt-get -y install openinfoman-hwr
 COPY csd_lsd.xqm /var/lib/openinfoman/repo/com/github/openhie/openinfoman/csd_lsd.xqm
 
+VOLUME /var/lib/openinfoman/data
+
 #start service with logs
 
 CMD /var/lib/openinfoman/bin/basexhttp
