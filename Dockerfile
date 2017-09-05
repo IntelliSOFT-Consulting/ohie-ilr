@@ -50,7 +50,7 @@ COPY csd_lsd.xqm /var/lib/openinfoman/repo/com/github/openhie/openinfoman/csd_ls
 
 COPY csd_webconf.xqm /var/lib/openinfoman/repo/com/github/openhie/openinfoman/csd_webconf.xqm
 
-COPY /script.sh /script.sh
-RUN chmod +x /script.sh
+COPY cmd.sh /root/cmd.sh
+RUN chmod +x ~/cmd.sh
 
-CMD /script.sh
+CMD ~/cmd.sh

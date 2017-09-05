@@ -3,6 +3,5 @@ services:
   openinfoman:
     container_name: openinfoman
     image: uwitech/ohie-ilr
-    env_file: .env
     ports:
       - "9094:8984"
