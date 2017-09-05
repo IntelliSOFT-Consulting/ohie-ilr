@@ -53,4 +53,6 @@ COPY csd_webconf.xqm /var/lib/openinfoman/repo/com/github/openhie/openinfoman/cs
 COPY cmd.sh /root/cmd.sh
 RUN chmod +x ~/cmd.sh
 
+VOLUME /var/lib/openinfoman/data
+
 CMD ~/cmd.sh
