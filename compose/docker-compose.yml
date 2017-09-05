@@ -4,4 +4,4 @@ services:
     container_name: openinfoman
     image: uwitech/ohie-ilr
     ports:
-      - "9094:8984"
+      - "8984:8984"
