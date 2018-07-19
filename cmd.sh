@@ -10,6 +10,7 @@ export OPENINFOMAN_URL
 /var/lib/openinfoman/bin/openinfoman > /dev/null 2>&1 &
 
 # start logging
+mkdir -p /var/lib/openinfoman/data/.logs/
 inotifywait -m /var/lib/openinfoman/data/.logs/ -e modify | \
 while read
 do
