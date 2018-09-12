@@ -11,9 +11,12 @@ python-software-properties \
 wget \
 inotify-tools \
 debconf-utils unzip \
-git \
-default-jre \
-openjdk-7-jre
+git
+
+RUN sudo add-apt-repository ppa:openjdk-r/ppa
+RUN sudo apt-get update
+RUN sudo apt-get -y install openjdk-7-jre
+
 RUN unzip ~/BaseX862.zip -d ~/
 RUN touch ~/basex/.basexhome
 RUN chmod 777 -R ~/basex
@@ -35,7 +38,7 @@ COPY basex.sh /root/basex.sh
 RUN chmod +x ~/basex.sh
 RUN ~/basex.sh
 
-COPY web.xml /root/basex/webapp/WEB-INF/web.xml 
+COPY web.xml /root/basex/webapp/WEB-INF/web.xml
 
 #install openinfoman-ilr
 
@@ -52,6 +55,11 @@ COPY csd_webconf.xqm /var/lib/openinfoman/repo/com/github/openhie/openinfoman/cs
 
 COPY cmd.sh /root/cmd.sh
 RUN chmod +x ~/cmd.sh
+
+COPY openinfoman_run.sh /var/lib/openinfoman/bin/openinfoman
+RUN chmod +x /var/lib/openinfoman/bin/openinfoman
+
+COPY basex.conf /var/lib/openinfoman/.basex
 
 VOLUME /var/lib/openinfoman/data
 
