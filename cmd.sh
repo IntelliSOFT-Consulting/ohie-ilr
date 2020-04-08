@@ -1,6 +1,6 @@
 #!/bin/bash
 
-: ${OPENINFOMAN_URL=http://localhost:8984}
+: ${OPENINFOMAN_URL=http://test.cbhipp.intellisoftkenya.com:8984}
 
 export OPENINFOMAN_URL
 
