@@ -2,6 +2,8 @@ version: "2"
 services:
   openinfoman:
     container_name: openinfoman
-    image: uwitech/ohie-ilr
+    build:
+      context: ../
+      dockerfile: Dockerfile
     ports:
       - "8984:8984"
