@@ -1,6 +1,6 @@
 #!/bin/bash
 
-: ${SERVER_NAME=localhost}
+: ${SERVER_NAME=test.cbhipp.intellisoftkenya.com}
 
 export SERVER_NAME
 
