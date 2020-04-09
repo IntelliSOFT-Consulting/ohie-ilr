@@ -18,7 +18,7 @@ basex -Vc "repo install csd_local_services_cache.xqm"
 basex -Vc "repo install csd_merge_cached_services.xqm"
 basex -Vc "repo install csr_processor.xqm"
 basex -Vc "repo install svs_load_shared_value_sets.xqm"
-basex -Vc "CREATE DATABASE var"
+basex -Vc "CREATE DATABASE provider_directory"
 
 #Installation of csv adapter
 cd ~/
